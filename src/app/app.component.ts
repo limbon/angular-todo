@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TodoService } from './todo.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: [ './app.component.scss' ]
 })
-export class AppComponent {
-  title = 'angular-todo';
+export class AppComponent implements OnInit {
+	constructor(private todoService: TodoService) {}
+
+	ngOnInit() {}
 }
