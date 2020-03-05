@@ -39,7 +39,7 @@ export class TodoService {
 	updateTodo(id: string, data: Todo) {
 		const todo = this.todos.filter((t) => t.id === id)[0];
 		todo.name = data.name;
-		todo.description = data.name;
+		todo.description = data.description;
 		localStorage.setItem('todos', JSON.stringify(this.todos));
 	}
 

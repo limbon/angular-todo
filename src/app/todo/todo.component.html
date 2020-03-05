@@ -6,9 +6,16 @@
         <span class="date">{{ date }}</span>
     </div>
     <div class="controls">
-        <button (click)="remove()" class="del">D</button>
-        <button (click)="toggleEditState()" class="edit">E</button>
-        <button (click)="updateStatus()" class="done">C</button>
+        <button (click)="remove()" class="del">
+            <fa-icon [icon]="icons.faTrash"></fa-icon>
+        </button>
+        <button (click)="toggleEditState()" class="edit">
+            <fa-icon [icon]="icons.faEdit"></fa-icon>
+        </button>
+        <button (click)="updateStatus()" [ngClass]="{done: !complete, undone: complete}">
+            <fa-icon *ngIf="!complete" [icon]="icons.faCheck"></fa-icon>
+            <fa-icon *ngIf="complete" [icon]="icons.faPlus" class="cross"></fa-icon>
+        </button>
     </div>
 </div>
 <div *ngIf="editState" class="edit-container">

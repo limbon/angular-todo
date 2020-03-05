@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { TodoService } from './todo.service';
 import { TodoComponent } from './todo/todo.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
 	declarations: [ AppComponent, TodoComponent, TodoFormComponent ],
-	imports: [ BrowserModule, FormsModule ],
+	imports: [ BrowserModule, FormsModule, FontAwesomeModule ],
 	providers: [ TodoService ],
 	bootstrap: [ AppComponent ]
 })

@@ -1,7 +1,7 @@
 .container {
 	height: 100%;
 	display: grid;
-	grid-template-columns: 1fr 32px;
+	grid-template-columns: 1fr 36px;
 	gap: 16px;
 	padding: 8px;
 	border: 2px solid black;
@@ -34,15 +34,15 @@
 	}
 	.controls {
 		display: grid;
-		grid-auto-rows: 32px;
+		grid-auto-rows: 36px;
 		gap: 8px;
 
 		button {
-			border-radius: 50%;
-			outline: none;
+			font-size: 18px;
 			color: #fff;
 			border: 0;
-			font-size: 18px;
+			border-radius: 50%;
+			outline: none;
 		}
 
 		.del {
@@ -53,6 +53,14 @@
 		}
 		.done {
 			background-color: #009c00;
+		}
+		.undone {
+			background-color: #ee5700;
+
+			.cross {
+				display: block;
+				transform: rotateZ(45deg);
+			}
 		}
 	}
 }

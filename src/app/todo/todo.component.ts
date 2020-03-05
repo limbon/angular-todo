@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Todo, TodoService } from '../todo.service';
+import { faTrash, faEdit, faCheck, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-todo',
@@ -14,6 +15,12 @@ export class TodoComponent implements OnInit, Todo {
 	@Input() id: string;
 
 	editState: boolean = false;
+	icons = {
+		faCheck,
+		faEdit,
+		faTrash,
+		faPlus
+	};
 
 	constructor(private todoService: TodoService) {}
 
