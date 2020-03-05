@@ -22,4 +22,8 @@ export class TodoComponent implements OnInit, Todo {
 	remove() {
 		this.todoService.removeTodo(this.id);
 	}
+
+	updateStatus() {
+		this.todoService.updateStatus(this.id, !this.complete);
+	}
 }
