@@ -1,4 +1,5 @@
 .container {
+	height: 100%;
 	display: grid;
 	grid-template-columns: 1fr 32px;
 	gap: 16px;
@@ -20,6 +21,10 @@
 
 		.description {
 			font-size: 18px;
+			white-space: pre-wrap;
+			overflow: scroll;
+			overflow-y: auto;
+			overflow-x: auto;
 		}
 
 		.date {

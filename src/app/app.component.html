@@ -1,12 +1,15 @@
-<div class="container">
-    <h1>Angular-Todo</h1>
-    <div class="list">
-        <app-todo *ngFor="let t of todos" 
-            [name]="t.name" 
-            [description]="t.description" 
-            [id]='t.id' 
-            [date]='t.date'
-            [complete]='t.complete'
-        ></app-todo>
+<div class="wrapper">
+    <div class="container">
+        <h1>Angular-Todo</h1>
+        <div class="list">
+            <app-todo *ngFor="let t of todos" 
+                [name]="t.name" 
+                [description]="t.description" 
+                [id]='t.id' 
+                [date]='t.date'
+                [complete]='t.complete'
+            ></app-todo>
+        </div>
+        <app-todo-form></app-todo-form>
     </div>
 </div>
