@@ -7,9 +7,16 @@ import { TodoService, Todo } from './todo.service';
 	styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent implements OnInit {
+	filter: string = '';
+
 	get todos(): Todo[] {
-		return this.todoService.getTodos();
+		if (this.filter.length) {
+			return this.todoService.getFilteredTodos(this.filter);
+		} else {
+			return this.todoService.getTodos();
+		}
 	}
+
 	constructor(private todoService: TodoService) {}
 
 	ngOnInit() {}

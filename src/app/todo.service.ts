@@ -55,4 +55,8 @@ export class TodoService {
 			localStorage.setItem('todos', JSON.stringify(this.todos));
 		}
 	}
+
+	getFilteredTodos(filter: string) {
+		return this.todos.filter((t) => t.name.toLowerCase().startsWith(filter.toLowerCase()));
+	}
 }

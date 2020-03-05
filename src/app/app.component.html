@@ -1,7 +1,9 @@
 <div class="wrapper">
     <div class="container">
         <h1>Angular-Todo</h1>
+        <input placeholder="Search" class="filter" [(ngModel)]="filter" />
         <div class="list">
+            <h3 *ngIf="!todos.length">Todo List is Empty</h3>
             <app-todo *ngFor="let t of todos" 
                 [name]="t.name" 
                 [description]="t.description" 
