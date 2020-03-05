@@ -1,0 +1,9 @@
+<div>
+    <app-todo *ngFor="let t of todos" 
+        [name]="t.name" 
+        [description]="t.description" 
+        [id]='t.id' 
+        [date]='t.date'
+        [complete]='t.complete'
+    ></app-todo>
+</div>

@@ -1,0 +1,53 @@
+.container {
+	display: grid;
+	grid-template-columns: 1fr 32px;
+	gap: 16px;
+	padding: 8px;
+	border: 2px solid black;
+
+	.data {
+		display: grid;
+		gap: 8px;
+
+		.id {
+			font-size: 10px;
+			justify-self: end;
+		}
+
+		.name {
+			font-size: 28px;
+		}
+
+		.description {
+			font-size: 18px;
+		}
+
+		.date {
+			font-size: 12px;
+			justify-self: end;
+		}
+	}
+	.controls {
+		display: grid;
+		grid-auto-rows: 32px;
+		gap: 8px;
+
+		button {
+			border-radius: 50%;
+			outline: none;
+			color: #fff;
+			border: 0;
+			font-size: 18px;
+		}
+
+		.del {
+			background-color: #8f0000;
+		}
+		.edit {
+			background-color: #0060fa;
+		}
+		.done {
+			background-color: #009c00;
+		}
+	}
+}
