@@ -18,5 +18,7 @@ export class TodoFormComponent implements OnInit {
 		if (this.name) {
 			this.todoService.addTodo({ name: this.name, description: this.description, complete: false });
 		}
+		this.name = '';
+		this.description = '';
 	}
 }

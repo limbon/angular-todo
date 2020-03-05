@@ -61,3 +61,31 @@
 	border-color: #32cd32;
 	background-color: rgba(50, 205, 50, 0.247);
 }
+
+// EDIT-STATE //
+
+.edit-container {
+	@extend .container;
+	grid-template-columns: 1fr;
+	gap: 4px;
+
+	input {
+		font-size: 18px;
+		padding: 8px;
+	}
+
+	textarea {
+		font-size: 16px;
+		padding: 8px;
+		resize: none;
+	}
+
+	button {
+		max-width: 100px;
+		font-size: 18px;
+		color: #fff;
+		background-color: #0060fa;
+		border: 0;
+		padding: 8px;
+	}
+}

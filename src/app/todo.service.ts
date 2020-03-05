@@ -36,6 +36,13 @@ export class TodoService {
 		localStorage.setItem('todos', JSON.stringify(this.todos));
 	}
 
+	updateTodo(id: string, data: Todo) {
+		const todo = this.todos.filter((t) => t.id === id)[0];
+		todo.name = data.name;
+		todo.description = data.name;
+		localStorage.setItem('todos', JSON.stringify(this.todos));
+	}
+
 	getTodos() {
 		return this.todos;
 	}

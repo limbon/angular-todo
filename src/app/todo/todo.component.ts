@@ -13,6 +13,8 @@ export class TodoComponent implements OnInit, Todo {
 	@Input() complete: boolean;
 	@Input() id: string;
 
+	editState: boolean = false;
+
 	constructor(private todoService: TodoService) {}
 
 	ngOnInit(): void {
@@ -25,5 +27,16 @@ export class TodoComponent implements OnInit, Todo {
 
 	updateStatus() {
 		this.todoService.updateStatus(this.id, !this.complete);
+	}
+
+	toggleEditState() {
+		if (this.editState) {
+			this.todoService.updateTodo(this.id, {
+				name: this.name,
+				description: this.description,
+				complete: this.complete
+			});
+		}
+		this.editState = !this.editState;
 	}
 }

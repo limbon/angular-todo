@@ -1,4 +1,4 @@
-<div class="container" [ngClass]="{ complete: complete }">
+<div *ngIf="!editState" class="container" [ngClass]="{ complete: complete }">
     <div class="data">
         <span class="id">{{ id }}</span>
         <span class="name">{{ name }}</span>
@@ -7,7 +7,12 @@
     </div>
     <div class="controls">
         <button (click)="remove()" class="del">D</button>
-        <button class="edit">E</button>
-        <button class="done" (click)="updateStatus()">C</button>
+        <button (click)="toggleEditState()" class="edit">E</button>
+        <button (click)="updateStatus()" class="done">C</button>
     </div>
+</div>
+<div *ngIf="editState" class="edit-container">
+    <input [(ngModel)]="name" type="text">
+    <textarea [(ngModel)]="description"></textarea>
+    <button (click)="toggleEditState()">Save</button>
 </div>
