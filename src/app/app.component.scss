@@ -1,4 +1,23 @@
-div {
+.container {
 	max-width: 512px;
+	min-height: 600px;
 	display: grid;
+	grid-template-rows: 64px 1fr;
+	gap: 16px;
+	margin: 0 auto;
+	padding: 8px;
+	border: 2px solid black;
+
+	h1 {
+		text-align: center;
+		font-size: 44px;
+		align-self: center;
+	}
+
+	.list {
+		display: grid;
+		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
 }
