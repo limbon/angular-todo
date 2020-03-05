@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Todo } from '../todo.service';
+import { Todo, TodoService } from '../todo.service';
 
 @Component({
 	selector: 'app-todo',
@@ -13,9 +13,13 @@ export class TodoComponent implements OnInit, Todo {
 	@Input() complete: boolean;
 	@Input() id: string;
 
-	constructor() {}
+	constructor(private todoService: TodoService) {}
 
 	ngOnInit(): void {
 		this.date = new Date(this.date).toLocaleString();
+	}
+
+	remove() {
+		this.todoService.removeTodo(this.id);
 	}
 }

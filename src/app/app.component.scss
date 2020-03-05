@@ -23,6 +23,7 @@
 		.list {
 			width: 100%;
 			display: grid;
+			grid-auto-rows: max-content;
 			gap: 8px;
 			overflow: scroll;
 			overflow-x: hidden;
